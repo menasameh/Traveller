@@ -16,6 +16,34 @@
 		3CDDC08826137B4E00E3827C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC08626137B4E00E3827C /* LaunchScreen.storyboard */; };
 		3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC09226137B4E00E3827C /* TravellerTests.swift */; };
 		3CDDC09E26137B4E00E3827C /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC09D26137B4E00E3827C /* TravellerUITests.swift */; };
+		3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
+		3CDDC0DB2613AA3100E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
+		3CDDC0E82613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
+		3CDDC0E92613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
+		3CDDC0EA2613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
+		3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0EE2613AD4F00E3827C /* NetworkTests.swift */; };
+		3CDDC0FB2613AE4300E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
+		3CDDC0FF2613AE4300E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
+		3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
+		3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
+		3CDDC1102613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
+		3CDDC1112613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
+		3CDDC1122613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
+		3CDDC11A2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
+		3CDDC11B2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
+		3CDDC11C2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
+		3CDDC1242613BE5E00E3827C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1232613BE5E00E3827C /* ErrorResponse.swift */; };
+		3CDDC1252613BE5E00E3827C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1232613BE5E00E3827C /* ErrorResponse.swift */; };
+		3CDDC1262613BE5E00E3827C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1232613BE5E00E3827C /* ErrorResponse.swift */; };
+		3CDDC12B2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
+		3CDDC12C2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
+		3CDDC12D2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
+		3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
+		3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
+		3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
+		3CDDC13C2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
+		3CDDC13D2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
+		3CDDC13E2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
 		3E6FF6500DD3B952002A8A11 /* libPods-Traveller-TravellerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A145564D7CFDD59D6234AEAC /* libPods-Traveller-TravellerUITests.a */; };
 		76BBD769426C05F809F4148C /* libPods-Traveller.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D9CF1E3AD9C79BD38B018 /* libPods-Traveller.a */; };
 		8BBB218C35F180B813841F54 /* libPods-TravellerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86438D96670FECEC4D0E5720 /* libPods-TravellerTests.a */; };
@@ -54,6 +82,16 @@
 		3CDDC09926137B4E00E3827C /* TravellerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC09D26137B4E00E3827C /* TravellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUITests.swift; sourceTree = "<group>"; };
 		3CDDC09F26137B4E00E3827C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDDC0D02613A95900E3827C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		3CDDC0DA2613AA3100E3827C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		3CDDC0EE2613AD4F00E3827C /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		3CDDC10F2613B67A00E3827C /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		3CDDC1192613B6D900E3827C /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
+		3CDDC1232613BE5E00E3827C /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		3CDDC12A2613C9FB00E3827C /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPickerAPIConfiguration.swift; sourceTree = "<group>"; };
+		3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiwiAPIConfiguration.swift; sourceTree = "<group>"; };
 		5F86D3DEDEDCF294AA731263 /* Pods-Traveller-TravellerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller-TravellerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Traveller-TravellerUITests/Pods-Traveller-TravellerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70E5B84412F2392E6BD386E5 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
 		7B06F1AB3F5FDB79829B295C /* Pods-TravellerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.release.xcconfig"; path = "Target Support Files/Pods-TravellerTests/Pods-TravellerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +169,8 @@
 		3CDDC07726137B4C00E3827C /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				3CDDC10E2613B66200E3827C /* Models */,
+				3CDDC0CF2613A92700E3827C /* Networking */,
 				3CDDC0C02613852F00E3827C /* Commons */,
 				3CDDC07C26137B4C00E3827C /* ViewController.swift */,
 				3CDDC07E26137B4C00E3827C /* Main.storyboard */,
@@ -144,6 +184,7 @@
 			children = (
 				3CDDC09226137B4E00E3827C /* TravellerTests.swift */,
 				3CDDC09426137B4E00E3827C /* Info.plist */,
+				3CDDC0EE2613AD4F00E3827C /* NetworkTests.swift */,
 			);
 			path = TravellerTests;
 			sourceTree = "<group>";
@@ -167,6 +208,29 @@
 				3CDDC08626137B4E00E3827C /* LaunchScreen.storyboard */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		3CDDC0CF2613A92700E3827C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3CDDC0D02613A95900E3827C /* APIConstants.swift */,
+				3CDDC0DA2613AA3100E3827C /* APIClient.swift */,
+				3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */,
+				3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */,
+				3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3CDDC10E2613B66200E3827C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CDDC10F2613B67A00E3827C /* Flight.swift */,
+				3CDDC1192613B6D900E3827C /* FlightResponse.swift */,
+				3CDDC1232613BE5E00E3827C /* ErrorResponse.swift */,
+				3CDDC12A2613C9FB00E3827C /* APIResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		80AA0B84A43BE8E01F2D1128 /* Frameworks */ = {
@@ -381,10 +445,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDDC1102613B67A00E3827C /* Flight.swift in Sources */,
+				3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
 				3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */,
+				3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */,
 				3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */,
 				3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */,
+				3CDDC12B2613C9FB00E3827C /* APIResponse.swift in Sources */,
+				3CDDC1242613BE5E00E3827C /* ErrorResponse.swift in Sources */,
 				3CDDC08326137B4C00E3827C /* Traveller.xcdatamodeld in Sources */,
+				3CDDC11A2613B6D900E3827C /* FlightResponse.swift in Sources */,
+				3CDDC0E82613AA7200E3827C /* APIConfiguration.swift in Sources */,
+				3CDDC0DB2613AA3100E3827C /* APIClient.swift in Sources */,
+				3CDDC13C2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +465,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDDC1112613B67A00E3827C /* Flight.swift in Sources */,
+				3CDDC11B2613B6D900E3827C /* FlightResponse.swift in Sources */,
+				3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */,
+				3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
+				3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */,
 				3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */,
+				3CDDC0E92613AA7200E3827C /* APIConfiguration.swift in Sources */,
+				3CDDC0FB2613AE4300E3827C /* APIClient.swift in Sources */,
+				3CDDC13D2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
+				3CDDC1252613BE5E00E3827C /* ErrorResponse.swift in Sources */,
+				3CDDC12C2613C9FB00E3827C /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +483,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDDC11C2613B6D900E3827C /* FlightResponse.swift in Sources */,
+				3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
+				3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */,
 				3CDDC09E26137B4E00E3827C /* TravellerUITests.swift in Sources */,
+				3CDDC0EA2613AA7200E3827C /* APIConfiguration.swift in Sources */,
+				3CDDC0FF2613AE4300E3827C /* APIClient.swift in Sources */,
+				3CDDC12D2613C9FB00E3827C /* APIResponse.swift in Sources */,
+				3CDDC1122613B67A00E3827C /* Flight.swift in Sources */,
+				3CDDC1262613BE5E00E3827C /* ErrorResponse.swift in Sources */,
+				3CDDC13E2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
