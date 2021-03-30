@@ -103,7 +103,6 @@
 				9AFA2BF70D7DB8977C5E7AD1 /* Pods-TravellerTests.debug.xcconfig */,
 				7B06F1AB3F5FDB79829B295C /* Pods-TravellerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,13 +131,9 @@
 		3CDDC07726137B4C00E3827C /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
-				3CDDC07826137B4C00E3827C /* AppDelegate.swift */,
-				3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */,
+				3CDDC0C02613852F00E3827C /* Commons */,
 				3CDDC07C26137B4C00E3827C /* ViewController.swift */,
 				3CDDC07E26137B4C00E3827C /* Main.storyboard */,
-				3CDDC08426137B4E00E3827C /* Assets.xcassets */,
-				3CDDC08626137B4E00E3827C /* LaunchScreen.storyboard */,
-				3CDDC08926137B4E00E3827C /* Info.plist */,
 				3CDDC08126137B4C00E3827C /* Traveller.xcdatamodeld */,
 			);
 			path = Traveller;
@@ -160,6 +155,18 @@
 				3CDDC09F26137B4E00E3827C /* Info.plist */,
 			);
 			path = TravellerUITests;
+			sourceTree = "<group>";
+		};
+		3CDDC0C02613852F00E3827C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3CDDC07826137B4C00E3827C /* AppDelegate.swift */,
+				3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */,
+				3CDDC08426137B4E00E3827C /* Assets.xcassets */,
+				3CDDC08926137B4E00E3827C /* Info.plist */,
+				3CDDC08626137B4E00E3827C /* LaunchScreen.storyboard */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		80AA0B84A43BE8E01F2D1128 /* Frameworks */ = {
@@ -556,7 +563,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T9A8VLZFP;
-				INFOPLIST_FILE = Traveller/Info.plist;
+				INFOPLIST_FILE = Traveller/Commons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +583,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T9A8VLZFP;
-				INFOPLIST_FILE = Traveller/Info.plist;
+				INFOPLIST_FILE = Traveller/Commons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
