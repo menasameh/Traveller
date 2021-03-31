@@ -9,6 +9,7 @@ import UIKit
 
 class FlightTableViewCell: UITableViewCell {
     static public let identefier = "FlightTableViewCell"
+    private let defaultDestinationImageName = "defaultDestinationImage"
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var destinationName: UILabel!
@@ -30,8 +31,7 @@ class FlightTableViewCell: UITableViewCell {
             case .success(let image):
                 strongSelf.backgroundImage.image = image
             case .fail:
-                // TODO: add fallback image
-                strongSelf.backgroundImage.image = UIImage(named: "fallback")
+                strongSelf.backgroundImage.image = UIImage(named: strongSelf.defaultDestinationImageName)
             }
         }
         destinationName.text = flight.cityTo
