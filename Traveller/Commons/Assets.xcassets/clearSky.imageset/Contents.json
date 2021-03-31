@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "photos-1.jpeg",
+      "filename" : "clearSky-1.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "photos.jpeg",
+      "filename" : "clearSky.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "photos-2.jpeg",
+      "filename" : "clearSky-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

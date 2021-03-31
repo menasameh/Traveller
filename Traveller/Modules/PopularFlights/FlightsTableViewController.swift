@@ -7,8 +7,12 @@
 
 import UIKit
 
-class FlightsTableViewController: UITableViewController {
-
+class FlightsTableViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var loadingView: UIView!
+    
     var flightsViewModel = FlightsViewModel()
 
     override func viewDidLoad() {
@@ -19,18 +23,24 @@ class FlightsTableViewController: UITableViewController {
     private func setupView() {
         let nib = UINib(nibName: FlightTableViewCell.identefier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: FlightTableViewCell.identefier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        title = "Today Offers"
 
         flightsViewModel.listener = self
         flightsViewModel.requestPopularFlights()
     }
+}
 
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: - Table view delegate & data source
+extension FlightsTableViewController: UITableViewDelegate, UITableViewDataSource {
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return flightsViewModel.getFlightCount()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FlightTableViewCell.identefier, for: indexPath) as? FlightTableViewCell ?? FlightTableViewCell()
         cell.setupCell(for: flightsViewModel.getFlight(at: indexPath.row))
         return cell
@@ -39,14 +49,23 @@ class FlightsTableViewController: UITableViewController {
 
 extension FlightsTableViewController: FlightsViewModelListener {
     func requestFlightsStarted() {
-        
+        loadingView.isHidden = false
+        errorView.isHidden = true
+        emptyView.isHidden = true
     }
     
     func requestFlightsSucceeded() {
+        loadingView.isHidden = true
+        errorView.isHidden = true
+        if flightsViewModel.getFlightCount() == 0 {
+            emptyView.isHidden = false
+        }
         tableView.reloadData()
     }
     
     func requestFlightsFailed() {
-        
+        loadingView.isHidden = true
+        errorView.isHidden = false
+        emptyView.isHidden = true
     }
 }
