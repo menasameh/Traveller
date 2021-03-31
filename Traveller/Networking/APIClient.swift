@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct SkyPickerAPIClient {
+struct APIClient {
     static func getPopularFlights(onCompletion: @escaping (APIResponse<[Flight]>) -> ()) {
         AF.request(SkyPickerAPIConfiguration.getPopularFlights)
             .responseDecodable(of: FlightResponse.self) { response in
