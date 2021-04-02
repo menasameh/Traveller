@@ -20,9 +20,9 @@ class FlightTableViewCell: UITableViewCell {
     // TODO: refactor Flight object sent to view to have direct values
     func setupCell(for flight: Flight) {
         // Save destinationCityId to check once the image is received, is it the same or it has changed
-        destinationCityId = flight.mapIdto
-        try? KiwiAPIConfiguration.getDestinationImage(for: flight.mapIdto) { [weak self] response in
-            guard let strongSelf = self, strongSelf.destinationCityId == flight.mapIdto else {
+        destinationCityId = (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased()
+        try? KiwiAPIConfiguration.getDestinationImage(for: (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased()) { [weak self] response in
+            guard let strongSelf = self, strongSelf.destinationCityId == (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased() else {
                 // view has been deallocated, or cell was reused for another city
                 return
             }

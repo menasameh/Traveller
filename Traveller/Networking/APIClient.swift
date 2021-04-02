@@ -12,17 +12,16 @@ struct APIClient {
     static func getPopularFlights(for flightRequest: FlightRequest, onCompletion: @escaping (APIResponse<[Flight]>) -> ()) {
         AF.request(SkyPickerAPIConfiguration.getPopularFlights(flightRequest))
             .responseDecodable(of: FlightResponse.self) { response in
-                print(response)
             guard let responseValue = response.value else {
                 onCompletion(APIResponse.fail("Network Error"))
                 return
             }
-            
-            guard responseValue.errors == nil else {
-                onCompletion(APIResponse.fail(responseValue.errors?.first?.errors.first ?? "Network Error"))
+
+            guard responseValue.error == nil else {
+                onCompletion(APIResponse.fail(responseValue.error ?? "Network Error"))
                 return
             }
-            
+
             if let flights = responseValue.flights {
                 onCompletion(APIResponse.success(flights))
             } else {

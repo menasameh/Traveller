@@ -10,7 +10,8 @@ import Alamofire
 
 struct Constants {
     struct ProductionServer {
-        static let baseURL = "https://api.skypicker.com"
+        static let baseURL = "https://tequila-api.kiwi.com/v2"
+        static let apiKey = Bundle.getInfoStringValue(for: "API_KEY")
     }
 }
 

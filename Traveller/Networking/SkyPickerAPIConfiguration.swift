@@ -10,6 +10,7 @@ import CoreLocation
 import Alamofire
 
 enum SkyPickerAPIConfiguration: APIConfiguration {
+    private static let RESULT_LIMIT = 50
     
     case getPopularFlights(FlightRequest)
   
@@ -22,24 +23,20 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
     }
     // MARK: - Parameters
      var parameters: RequestParams {
-        var parameter: [String : String] = [
-            "partner" : "picky",
-            "v" : "3"
-        ]
-
         switch self {
-        case .getPopularFlights(let flightRequest):           
+        case .getPopularFlights(let flightRequest):
+            var parameter: [String : String] = [:]
+            
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyyy"
             
-            parameter["flyFrom"] = "\(flightRequest.location.latitude)-\(flightRequest.location.longitude)-250km"
-            parameter["dateFrom"] = formatter.string(from: flightRequest.startDate)
-            parameter["dateTo"] = formatter.string(from: flightRequest.endDate)
-            parameter["oneforcity"] = "1"
+            parameter["fly_from"] = "\(flightRequest.location.latitude)-\(flightRequest.location.longitude)-250km"
+            parameter["date_from"] = formatter.string(from: flightRequest.startDate)
+            parameter["date_to"] = formatter.string(from: flightRequest.endDate)
+            parameter["one_for_city"] = "1"
             parameter["sort"] = "popularity"
             parameter["asc"] = "0"
-            parameter["limit"] = "45"
-
+            parameter["limit"] = "\(SkyPickerAPIConfiguration.RESULT_LIMIT)"
             return .url(parameter)
         }
     }
@@ -48,13 +45,14 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
     var path: String {
         switch self {
         case .getPopularFlights:
-            return "/flights"
+            return "/search"
         }
     }
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
         let url = try Constants.ProductionServer.baseURL.asURL()
+        let apiKey = Constants.ProductionServer.apiKey!
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
@@ -64,6 +62,7 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
         // Common Headers
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        urlRequest.setValue(apiKey, forHTTPHeaderField: "apikey")
         
         // Parameters
         switch parameters {

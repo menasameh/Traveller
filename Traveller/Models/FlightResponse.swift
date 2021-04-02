@@ -9,12 +9,12 @@ import Foundation
 
 struct FlightResponse: Codable {
     let id: String?
-    let errors: [ErrorResponse]?
+    let error: String?
     let flights: [Flight]?
     
     enum CodingKeys: String, CodingKey {
         case id = "search_id"
-        case errors = "message"
+        case error = "message"
         case flights = "data"
     }
 }
