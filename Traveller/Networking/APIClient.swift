@@ -9,10 +9,10 @@ import Foundation
 import Alamofire
 
 struct APIClient {
-    static func getPopularFlights(onCompletion: @escaping (APIResponse<[Flight]>) -> ()) {
-        AF.request(SkyPickerAPIConfiguration.getPopularFlights)
+    static func getPopularFlights(for flightRequest: FlightRequest, onCompletion: @escaping (APIResponse<[Flight]>) -> ()) {
+        AF.request(SkyPickerAPIConfiguration.getPopularFlights(flightRequest))
             .responseDecodable(of: FlightResponse.self) { response in
-
+                print(response)
             guard let responseValue = response.value else {
                 onCompletion(APIResponse.fail("Network Error"))
                 return

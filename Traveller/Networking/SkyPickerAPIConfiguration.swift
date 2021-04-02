@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import CoreLocation
 import Alamofire
 
 enum SkyPickerAPIConfiguration: APIConfiguration {
     
-    case getPopularFlights
+    case getPopularFlights(FlightRequest)
   
     // MARK: - HTTPMethod
     var method: HTTPMethod {
@@ -27,17 +28,13 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
         ]
 
         switch self {
-        case .getPopularFlights:
-            let startDate = Date()
-            let endDate = startDate.addingTimeInterval(60 * 60 * 24 * 7)
-            
+        case .getPopularFlights(let flightRequest):           
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyyy"
             
-            parameter["flyFrom"] = "49.2-16.61-250km"
-            parameter["to"] = "anywhere"
-            parameter["dateFrom"] = formatter.string(from: startDate)
-            parameter["dateTo"] = formatter.string(from: endDate)
+            parameter["flyFrom"] = "\(flightRequest.location.latitude)-\(flightRequest.location.longitude)-250km"
+            parameter["dateFrom"] = formatter.string(from: flightRequest.startDate)
+            parameter["dateTo"] = formatter.string(from: flightRequest.endDate)
             parameter["oneforcity"] = "1"
             parameter["sort"] = "popularity"
             parameter["asc"] = "0"
@@ -83,9 +80,5 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
                 urlRequest.url = components?.url
         }
             return urlRequest
-    }
-    
-    func request() throws -> DataRequest {
-        AF.request(self)
     }
 }

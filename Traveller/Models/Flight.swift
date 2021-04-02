@@ -72,9 +72,9 @@ struct Availability: Codable {
 
 // MARK: - Baglimit
 struct Baglimit: Codable {
-    let handWidth, handHeight, handLength, handWeight: Int
-    let holdWidth, holdHeight, holdLength, holdDimensionsSum: Int
-    let holdWeight: Int
+    let handWidth, handHeight, handLength, handWeight: Int?
+    let holdWidth, holdHeight, holdLength, holdDimensionsSum: Int?
+    let holdWeight: Int?
 
     enum CodingKeys: String, CodingKey {
         case handWidth = "hand_width"
