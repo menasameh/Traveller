@@ -19,7 +19,7 @@ class FlightsViewModel: NSObject {
     private static let SEARCH_DURATION = 7
     private static let FLIGHTS_COUNT_TO_SHOW = 5
     // KEEP_DESTINATION_HISTORY is in days to keep the destinations shown on the app saved in the DB
-    private static let KEEP_DESTINATION_HISTORY = 7
+    private static let KEEP_DESTINATION_HISTORY = 1
     
     private var flights: [Flight] = []
     weak var listener: FlightsViewModelListener?
@@ -52,8 +52,7 @@ class FlightsViewModel: NSObject {
         APIClient.getPopularFlights(for: flightRequest) { [weak self] response in
             switch response {
             case .success(let flights):
-                self?.flights = Array(flights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
-                self?.listener?.requestFlightsSucceeded()
+                self?.filter(apiFlights: flights)
             case .fail(let error):
                 self?.listener?.requestFlightsFailed()
                 // TODO: Display error
@@ -62,23 +61,39 @@ class FlightsViewModel: NSObject {
         }
     }
     
-    private func filter(flights allFlights: [Flight]) {
+    private func filter(apiFlights allFlights: [Flight]) {
         FlightDstCity.removeFlightCities(before: Date().add(days: -FlightsViewModel.KEEP_DESTINATION_HISTORY))
         let savedFlights = FlightDstCity.getAllSavedFlights()
+        filter(apiFlights: allFlights, savedFlights: savedFlights)
+    }
+    
+    private func filter(apiFlights allFlights: [Flight], savedFlights: [FlightDstCity]) {
         let todaysFlights = savedFlights.filter { $0.date?.isToday() ?? false }.map { $0.city }
-        let otherFlights = savedFlights.filter { !($0.date?.isToday() ?? false) }
+        let otherFlights = savedFlights.filter { !($0.date?.isToday() ?? false) }.map { $0.city }
 
         if !todaysFlights.isEmpty {
-            // show same destinations
-            let filterFlights = allFlights.filter { todaysFlights.contains($0.cityTo) }
-            if filterFlights.count == FlightsViewModel.FLIGHTS_COUNT_TO_SHOW {
-                flights = filterFlights
-            } else {
-                
+            // there are already saved flights for today, we need to show the same destinations
+            var filterFlights = allFlights.filter { todaysFlights.contains($0.cityTo) }
+            // if a trip is not available anymore the count of flight will be less than needed
+            if filterFlights.count < FlightsViewModel.FLIGHTS_COUNT_TO_SHOW {
+                // calculate the needed amount of additional flights
+                let neededCount = FlightsViewModel.FLIGHTS_COUNT_TO_SHOW - filterFlights.count
+                let additionalFlights = allFlights.filter { otherFlights.contains($0.cityTo) }.prefix(neededCount)
+                // add additional flights to the results
+                filterFlights.append(contentsOf: additionalFlights)
+                // add additional flights to the today's flights in the database
+                FlightDstCity.saveFlightCities(Array(additionalFlights), on: Date())
             }
+            // ensure that we return the exact count and no more than that
+            flights = Array(filterFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
         } else {
-            
+            // No flights saved for today, choose some and save them into the database
+            let availableFlights = allFlights.filter { !otherFlights.contains($0.cityTo) }
+            let choosenFlights = Array(availableFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
+            FlightDstCity.saveFlightCities(choosenFlights, on: Date())
+            flights = choosenFlights
         }
+        listener?.requestFlightsSucceeded()
     }
     
     func getFlight(at index: Int) -> Flight {
