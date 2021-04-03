@@ -24,6 +24,7 @@ class FlightsViewModel: NSObject {
     private var flights: [Flight] = []
     weak var listener: FlightsViewModelListener?
     var locationManager = LocationManager()
+    var kiwiApi = KiwiAPIConfiguration()
     
     override init() {
         super.init()

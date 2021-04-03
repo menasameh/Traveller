@@ -42,7 +42,7 @@ extension FlightsTableViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FlightTableViewCell.identefier, for: indexPath) as? FlightTableViewCell ?? FlightTableViewCell()
-        cell.setupCell(for: flightsViewModel.getFlight(at: indexPath.row))
+        cell.setupCell(for: flightsViewModel.getFlight(at: indexPath.row), api: flightsViewModel.kiwiApi)
         return cell
     }
 }

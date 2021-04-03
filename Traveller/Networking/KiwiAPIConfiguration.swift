@@ -8,16 +8,34 @@
 import Alamofire
 import AlamofireImage
 
-struct KiwiAPIConfiguration {
-    static private let urlFormat = "https://images.kiwi.com/photos/600x330/%@.jpg"
+class KiwiAPIConfiguration {
+    private let URL_FORMAT = "https://images.kiwi.com/photos/600x330/%@.jpg"
+    let imageCache: AutoPurgingImageCache
     
-    static func getDestinationImage(for destinationId: String, onCompletion: @escaping (APIResponse<UIImage>) -> () ) throws {
-        AF.request(String(format: urlFormat, arguments: [destinationId])).responseImage { response in
-            
-            if case .success(let image) = response.result {
-                onCompletion(APIResponse.success(image))
-            } else {
+    init() {
+        imageCache = AutoPurgingImageCache()
+    }
+    
+    func getDestinationImage(for destinationId: String, onCompletion: @escaping (APIResponse<UIImage>) -> () ) throws {
+        if let image = imageCache.image(withIdentifier: destinationId) {
+            onCompletion(APIResponse.success(image))
+            return
+        }
+        
+        APIClient.getCityId(for: LocationRequest(airportId: destinationId)) { [weak self] response in
+            guard let strongSelf = self else { return }
+            guard case let .success(cityId) = response else {
                 onCompletion(APIResponse.fail("Can't load image"))
+                return
+            }
+
+            AF.request(String(format: strongSelf.URL_FORMAT, arguments: [cityId])).responseImage { [weak self] response in
+                if case .success(let image) = response.result {
+                    self?.imageCache.add(image, withIdentifier: destinationId)
+                    onCompletion(APIResponse.success(image))
+                } else {
+                    onCompletion(APIResponse.fail("Can't load image"))
+                }
             }
         }
     }
