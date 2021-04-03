@@ -13,11 +13,14 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
     private static let RESULT_LIMIT = 50
     
     case getPopularFlights(FlightRequest)
+    case getCityId(LocationRequest)
   
     // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
         case .getPopularFlights:
+            return .get
+        case .getCityId:
             return .get
         }
     }
@@ -26,18 +29,17 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
         switch self {
         case .getPopularFlights(let flightRequest):
             var parameter: [String : String] = [:]
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd/MM/yyyy"
-            
+
             parameter["fly_from"] = "\(flightRequest.location.latitude)-\(flightRequest.location.longitude)-250km"
-            parameter["date_from"] = formatter.string(from: flightRequest.startDate)
-            parameter["date_to"] = formatter.string(from: flightRequest.endDate)
+            parameter["date_from"] = flightRequest.startDate.toString()
+            parameter["date_to"] = flightRequest.endDate.toString()
             parameter["one_for_city"] = "1"
             parameter["sort"] = "popularity"
             parameter["asc"] = "0"
             parameter["limit"] = "\(SkyPickerAPIConfiguration.RESULT_LIMIT)"
             return .url(parameter)
+        case .getCityId(let locationReequest):
+            return .url(["id" : locationReequest.airportId])
         }
     }
     
@@ -45,7 +47,9 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
     var path: String {
         switch self {
         case .getPopularFlights:
-            return "/search"
+            return "/v2/search"
+        case .getCityId:
+            return "/locations/id"
         }
     }
     

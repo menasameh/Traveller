@@ -10,8 +10,8 @@ import Foundation
 struct Flight: Codable {
     let id: String
     let duration: Duration
+    let flyTo: String
     let cityTo: String
-    let countryTo: Country
     let distance: Double
     let price: Int
     let availability: Availability
@@ -21,7 +21,7 @@ struct Flight: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, duration
-        case cityTo, countryTo, distance
+        case flyTo, cityTo, distance
         case price, availability, conversion, route
         case bookingToken = "booking_token"
     }

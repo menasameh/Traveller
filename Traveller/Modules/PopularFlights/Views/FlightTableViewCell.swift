@@ -20,20 +20,30 @@ class FlightTableViewCell: UITableViewCell {
     // TODO: refactor Flight object sent to view to have direct values
     func setupCell(for flight: Flight) {
         // Save destinationCityId to check once the image is received, is it the same or it has changed
-        destinationCityId = (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased()
-        try? KiwiAPIConfiguration.getDestinationImage(for: (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased()) { [weak self] response in
-            guard let strongSelf = self, strongSelf.destinationCityId == (flight.cityTo.replacingOccurrences(of: " ", with: "-")+"_"+flight.countryTo.code).lowercased() else {
-                // view has been deallocated, or cell was reused for another city
+        destinationCityId = flight.flyTo
+        APIClient.getCityId(for: LocationRequest(airportId: flight.flyTo)) { [weak self] response in
+            guard let strongSelf = self else { return }
+            guard case let .success(cityId) = response else {
+                strongSelf.backgroundImage.image = UIImage(named: strongSelf.defaultDestinationImageName)
                 return
             }
 
-            switch response {
-            case .success(let image):
-                strongSelf.backgroundImage.image = image
-            case .fail:
-                strongSelf.backgroundImage.image = UIImage(named: strongSelf.defaultDestinationImageName)
+            try? KiwiAPIConfiguration.getDestinationImage(for: cityId) { [weak self] response in
+                guard let strongSelf = self, strongSelf.destinationCityId == flight.flyTo else {
+                    // view has been deallocated, or cell was reused for another city
+                    return
+                }
+
+                switch response {
+                case .success(let image):
+                    strongSelf.backgroundImage.image = image
+                case .fail:
+                    strongSelf.backgroundImage.image = UIImage(named: strongSelf.defaultDestinationImageName)
+                }
             }
         }
+        
+        
         destinationName.text = flight.cityTo
         price.text = Conversion.CodingKeys.eur.rawValue + " " + String(flight.price)
     }
