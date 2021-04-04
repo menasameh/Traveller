@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-P8-wKu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-P8-wKu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk3-zA-Ia2" userLabel="ErrorView">
@@ -95,7 +95,7 @@
                             <constraint firstAttribute="bottom" secondItem="pLz-4k-jjE" secondAttribute="bottom" id="MaB-4y-hMN"/>
                             <constraint firstItem="lIg-m7-ru5" firstAttribute="bottom" secondItem="pk3-zA-Ia2" secondAttribute="bottom" id="Q8h-LW-3Xo"/>
                             <constraint firstItem="pk3-zA-Ia2" firstAttribute="trailing" secondItem="lIg-m7-ru5" secondAttribute="trailing" id="X3V-Px-wLV"/>
-                            <constraint firstItem="lIg-m7-ru5" firstAttribute="bottom" secondItem="EbD-P8-wKu" secondAttribute="bottom" id="Ych-wH-Pue"/>
+                            <constraint firstAttribute="bottom" secondItem="EbD-P8-wKu" secondAttribute="bottom" id="Ych-wH-Pue"/>
                             <constraint firstItem="EbD-P8-wKu" firstAttribute="top" secondItem="lIg-m7-ru5" secondAttribute="top" id="ivl-1V-83x"/>
                             <constraint firstItem="lIg-m7-ru5" firstAttribute="trailing" secondItem="dJw-tw-u0a" secondAttribute="trailing" id="kB3-n8-mrG"/>
                             <constraint firstItem="EbD-P8-wKu" firstAttribute="leading" secondItem="lIg-m7-ru5" secondAttribute="leading" id="m2N-6W-7kG"/>

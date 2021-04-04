@@ -28,6 +28,9 @@
 		3C667B322619C85A00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
 		3C667B332619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
 		3C667B342619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
+		3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
+		3C667B3D261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
+		3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07C26137B4C00E3827C /* ViewController.swift */; };
@@ -111,6 +114,7 @@
 		3C667B232617E8E800709902 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 		3C667B2A2617E99E00709902 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3C667B312619C85A00709902 /* FlightCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCard.swift; sourceTree = "<group>"; };
+		3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toReadbleDuration.swift"; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			children = (
 				3C667AF826176CBF00709902 /* Bundle+getInfoValue.swift */,
 				3C667B152617BC5E00709902 /* Date+Utils.swift */,
+				3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 			files = (
 				3CDDC1102613B67A00E3827C /* Flight.swift in Sources */,
 				3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
+				3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
 				3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */,
 				3C667B242617E8E800709902 /* LocationResponse.swift in Sources */,
 				3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */,
@@ -609,6 +615,7 @@
 				3CDDC0FB2613AE4300E3827C /* APIClient.swift in Sources */,
 				3CDDC1772614E96100E3827C /* FlightRequest.swift in Sources */,
 				3CDDC13D2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
+				3C667B3D261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
 				3CDDC12C2613C9FB00E3827C /* APIResponse.swift in Sources */,
 				3CDDC155261487C100E3827C /* FlightsTableViewController.swift in Sources */,
 			);
@@ -624,6 +631,7 @@
 				3CDDC1802614EDDC00E3827C /* LocationManager.swift in Sources */,
 				3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
 				3CDDC156261487C100E3827C /* FlightsTableViewController.swift in Sources */,
+				3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
 				3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */,
 				3C667B182617BC5E00709902 /* Date+Utils.swift in Sources */,
 				3C667B072617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */,

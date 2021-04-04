@@ -26,7 +26,7 @@ class FlightsTableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        title = "Today Offers"
+        title = "Popular Offers"
 
         flightsViewModel.listener = self
         flightsViewModel.requestPopularFlights()

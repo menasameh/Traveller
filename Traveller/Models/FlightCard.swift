@@ -8,32 +8,29 @@
 import Foundation
 
 struct FlightCard {
-    let duration: String
     let city: String
     let airport: String
-    let distance: String
     let price: Int
     let currency: String
     let startDate: String
     var route: [String]
+    let duration: String
     
     var priceTag: String {
         "\(currency) \(price)"
     }
     
     var stops: String {
-        if route.count == 1 {
+        if route.count == 2 {
             return "Direct flight!"
         } else {
-            return "\(route.count) Stops"
+            return "\(route.count - 1) Stops"
         }
     }
     
     init(_ flight: Flight) {
-//        duration = flight.duration
         city = flight.cityTo
         airport = flight.flyTo
-//        distance = flight.distance
         price = flight.price
         currency = Conversion.CodingKeys.eur.rawValue
         
@@ -45,8 +42,6 @@ struct FlightCard {
         } else {
             startDate = ""
         }
-        
-        duration = ""
-        distance = ""
+        duration = flight.duration.departure.toReadbleDuration() ?? ""
     }
 }
