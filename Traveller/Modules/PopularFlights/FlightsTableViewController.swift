@@ -14,6 +14,11 @@ class FlightsTableViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     
     var flightsViewModel = FlightsViewModel()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

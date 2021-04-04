@@ -31,9 +31,11 @@
 		3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
 		3C667B3D261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
 		3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
+		3C667B47261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
+		3C667B48261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
+		3C667B49261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
-		3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07C26137B4C00E3827C /* ViewController.swift */; };
 		3CDDC08026137B4C00E3827C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC07E26137B4C00E3827C /* Main.storyboard */; };
 		3CDDC08326137B4C00E3827C /* Traveller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC08126137B4C00E3827C /* Traveller.xcdatamodeld */; };
 		3CDDC08526137B4E00E3827C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC08426137B4E00E3827C /* Assets.xcassets */; };
@@ -115,10 +117,10 @@
 		3C667B2A2617E99E00709902 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3C667B312619C85A00709902 /* FlightCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCard.swift; sourceTree = "<group>"; };
 		3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toReadbleDuration.swift"; sourceTree = "<group>"; };
+		3C667B46261A1B1C00709902 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CDDC07C26137B4C00E3827C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CDDC07F26137B4C00E3827C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CDDC08226137B4C00E3827C /* Traveller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Traveller.xcdatamodel; sourceTree = "<group>"; };
 		3CDDC08426137B4E00E3827C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = ManagedModels;
 			sourceTree = "<group>";
 		};
+		3C667B45261A1AEB00709902 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3C667B46261A1B1C00709902 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		3CDDC06C26137B4C00E3827C = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +256,6 @@
 				3CDDC10E2613B66200E3827C /* Models */,
 				3CDDC0CF2613A92700E3827C /* Networking */,
 				3CDDC0C02613852F00E3827C /* Commons */,
-				3CDDC07C26137B4C00E3827C /* ViewController.swift */,
 				3CDDC07E26137B4C00E3827C /* Main.storyboard */,
 				3CDDC08126137B4C00E3827C /* Traveller.xcdatamodeld */,
 			);
@@ -316,6 +325,7 @@
 		3CDDC14D261486AF00E3827C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3C667B45261A1AEB00709902 /* Home */,
 				3CDDC1512614875300E3827C /* PopularFlights */,
 			);
 			path = Modules;
@@ -563,10 +573,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C667B47261A1B1C00709902 /* HomeViewController.swift in Sources */,
 				3CDDC1102613B67A00E3827C /* Flight.swift in Sources */,
 				3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
 				3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
-				3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */,
 				3C667B242617E8E800709902 /* LocationResponse.swift in Sources */,
 				3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */,
 				3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */,
@@ -606,6 +616,7 @@
 				3CDDC17F2614EDDC00E3827C /* LocationManager.swift in Sources */,
 				3C667B332619C85B00709902 /* FlightCard.swift in Sources */,
 				3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
+				3C667B48261A1B1C00709902 /* HomeViewController.swift in Sources */,
 				3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */,
 				3C667B062617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */,
 				3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */,
@@ -631,6 +642,7 @@
 				3CDDC1802614EDDC00E3827C /* LocationManager.swift in Sources */,
 				3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
 				3CDDC156261487C100E3827C /* FlightsTableViewController.swift in Sources */,
+				3C667B49261A1B1C00709902 /* HomeViewController.swift in Sources */,
 				3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
 				3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */,
 				3C667B182617BC5E00709902 /* Date+Utils.swift in Sources */,
