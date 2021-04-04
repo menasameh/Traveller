@@ -21,7 +21,7 @@ class FlightsViewModel: NSObject {
     // KEEP_DESTINATION_HISTORY is in days to keep the destinations shown on the app saved in the DB
     private static let KEEP_DESTINATION_HISTORY = 1
     
-    private var flights: [Flight] = []
+    private var flights: [FlightCard] = []
     weak var listener: FlightsViewModelListener?
     var locationManager = LocationManager()
     var kiwiApi = KiwiAPIConfiguration()
@@ -85,18 +85,18 @@ class FlightsViewModel: NSObject {
                 FlightDstCity.saveFlightCities(Array(additionalFlights), on: Date())
             }
             // ensure that we return the exact count and no more than that
-            flights = Array(filterFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
+            flights = Array(filterFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW).map {FlightCard($0)} )
         } else {
             // No flights saved for today, choose some and save them into the database
             let availableFlights = allFlights.filter { !otherFlights.contains($0.cityTo) }
             let choosenFlights = Array(availableFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
             FlightDstCity.saveFlightCities(choosenFlights, on: Date())
-            flights = choosenFlights
+            flights = choosenFlights.map { FlightCard($0) }
         }
         listener?.requestFlightsSucceeded()
     }
     
-    func getFlight(at index: Int) -> Flight {
+    func getFlight(at index: Int) -> FlightCard {
         return flights[index]
     }
     

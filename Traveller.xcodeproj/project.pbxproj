@@ -25,6 +25,9 @@
 		3C667B2B2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
 		3C667B2C2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
 		3C667B2D2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
+		3C667B322619C85A00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
+		3C667B332619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
+		3C667B342619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC07D26137B4C00E3827C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07C26137B4C00E3827C /* ViewController.swift */; };
@@ -107,6 +110,7 @@
 		3C667B1C2617E58A00709902 /* LocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
 		3C667B232617E8E800709902 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 		3C667B2A2617E99E00709902 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3C667B312619C85A00709902 /* FlightCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCard.swift; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 			children = (
 				3C667B022617886A00709902 /* ManagedModels */,
 				3CDDC10F2613B67A00E3827C /* Flight.swift */,
+				3C667B312619C85A00709902 /* FlightCard.swift */,
 				3CDDC1192613B6D900E3827C /* FlightResponse.swift */,
 				3CDDC12A2613C9FB00E3827C /* APIResponse.swift */,
 				3CDDC1752614E96100E3827C /* FlightRequest.swift */,
@@ -564,6 +569,7 @@
 				3CDDC15F2614882700E3827C /* FlightTableViewCell.swift in Sources */,
 				3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */,
 				3CDDC12B2613C9FB00E3827C /* APIResponse.swift in Sources */,
+				3C667B322619C85A00709902 /* FlightCard.swift in Sources */,
 				3CDDC17E2614EDDC00E3827C /* LocationManager.swift in Sources */,
 				3CDDC08326137B4C00E3827C /* Traveller.xcdatamodeld in Sources */,
 				3CDDC11A2613B6D900E3827C /* FlightResponse.swift in Sources */,
@@ -592,6 +598,7 @@
 				3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */,
 				3CDDC16A2614B97600E3827C /* FlightsViewModel.swift in Sources */,
 				3CDDC17F2614EDDC00E3827C /* LocationManager.swift in Sources */,
+				3C667B332619C85B00709902 /* FlightCard.swift in Sources */,
 				3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
 				3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */,
 				3C667B062617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */,
@@ -628,6 +635,7 @@
 				3C667B1F2617E58B00709902 /* LocationRequest.swift in Sources */,
 				3CDDC12D2613C9FB00E3827C /* APIResponse.swift in Sources */,
 				3CDDC1122613B67A00E3827C /* Flight.swift in Sources */,
+				3C667B342619C85B00709902 /* FlightCard.swift in Sources */,
 				3CDDC16B2614B97600E3827C /* FlightsViewModel.swift in Sources */,
 				3CDDC13E2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
 				3CDDC1782614E96100E3827C /* FlightRequest.swift in Sources */,
