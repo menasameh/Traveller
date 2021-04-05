@@ -25,6 +25,10 @@ class FlightsViewModel: NSObject {
     weak var listener: FlightsViewModelListener?
     var locationManager = LocationManager()
     var kiwiApi = KiwiAPIConfiguration()
+    private lazy var coreDataStack = CoreDataStack()
+    private lazy var flightsService = FlightsService(
+      managedObjectContext: coreDataStack.mainContext,
+      coreDataStack: coreDataStack)
     
     override init() {
         super.init()
@@ -62,12 +66,12 @@ class FlightsViewModel: NSObject {
     }
     
     private func filter(apiFlights allFlights: [Flight]) {
-        FlightDstCity.removeFlightCities(before: Date().add(days: -FlightsViewModel.KEEP_DESTINATION_HISTORY))
-        let savedFlights = FlightDstCity.getAllSavedFlights()
+        flightsService.removeFlightCities(before: Date().add(days: -FlightsViewModel.KEEP_DESTINATION_HISTORY))
+        let savedFlights = flightsService.getAllSavedFlights()
         filter(apiFlights: allFlights, savedFlights: savedFlights)
     }
     
-    private func filter(apiFlights allFlights: [Flight], savedFlights: [FlightDstCity]) {
+    func filter(apiFlights allFlights: [Flight], savedFlights: [FlightDstCity]) {
         let todaysFlights = savedFlights.filter { $0.date?.isToday() ?? false }.map { $0.city }
         let otherFlights = savedFlights.filter { !($0.date?.isToday() ?? false) }.map { $0.city }
 
@@ -78,11 +82,11 @@ class FlightsViewModel: NSObject {
             if filterFlights.count < FlightsViewModel.FLIGHTS_COUNT_TO_SHOW {
                 // calculate the needed amount of additional flights
                 let neededCount = FlightsViewModel.FLIGHTS_COUNT_TO_SHOW - filterFlights.count
-                let additionalFlights = allFlights.filter { otherFlights.contains($0.cityTo) }.prefix(neededCount)
+                let additionalFlights = allFlights.filter { !otherFlights.contains($0.cityTo) }.prefix(neededCount)
                 // add additional flights to the results
                 filterFlights.append(contentsOf: additionalFlights)
                 // add additional flights to the today's flights in the database
-                FlightDstCity.saveFlightCities(Array(additionalFlights), on: Date())
+                flightsService.saveFlightCities(Array(additionalFlights), on: Date())
             }
             // ensure that we return the exact count and no more than that
             flights = Array(filterFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW).map {FlightCard($0)} )
@@ -90,7 +94,7 @@ class FlightsViewModel: NSObject {
             // No flights saved for today, choose some and save them into the database
             let availableFlights = allFlights.filter { !otherFlights.contains($0.cityTo) }
             let choosenFlights = Array(availableFlights.prefix(FlightsViewModel.FLIGHTS_COUNT_TO_SHOW))
-            FlightDstCity.saveFlightCities(choosenFlights, on: Date())
+            flightsService.saveFlightCities(choosenFlights, on: Date())
             flights = choosenFlights.map { FlightCard($0) }
         }
         listener?.requestFlightsSucceeded()

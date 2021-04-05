@@ -20,6 +20,22 @@ struct Flight: Codable {
     let bookingToken: String
     let route: [Route]
     let departureTime: String
+    
+    // for testing
+    init(cityTo: String) {
+        self.cityTo = cityTo
+        id = ""
+        duration = Duration(departure: 0, durationReturn: 0, total: 0)
+        flyFrom = ""
+        flyTo = ""
+        distance = 0
+        price = 0
+        availability = Availability(seats: 0)
+        conversion = Conversion(eur: 0)
+        bookingToken = ""
+        route = []
+        departureTime = ""
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, duration
