@@ -214,6 +214,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6W-DU-eqZ">
                                 <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                                <accessibility key="accessibilityConfiguration" identifier="popularFlights"/>
                                 <connections>
                                     <segue destination="bPt-nf-F4D" kind="show" id="cvY-XQ-AiY"/>
                                 </connections>

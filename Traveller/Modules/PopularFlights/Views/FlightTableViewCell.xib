@@ -114,6 +114,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="flightCard">
+                            <accessibilityTraits key="traits" image="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="mhe-Dl-PlE" firstAttribute="bottom" secondItem="JMI-0y-eGM" secondAttribute="bottom" constant="16" id="9BV-Vs-oeZ"/>
                             <constraint firstItem="JMI-0y-eGM" firstAttribute="top" secondItem="lxi-Li-GqU" secondAttribute="top" constant="8" id="LwP-ff-8Sb"/>
