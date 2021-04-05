@@ -8,32 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3C667AF926176CBF00709902 /* Bundle+getInfoValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667AF826176CBF00709902 /* Bundle+getInfoValue.swift */; };
-		3C667AFA26176CBF00709902 /* Bundle+getInfoValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667AF826176CBF00709902 /* Bundle+getInfoValue.swift */; };
-		3C667AFB26176CBF00709902 /* Bundle+getInfoValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667AF826176CBF00709902 /* Bundle+getInfoValue.swift */; };
 		3C667B052617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B032617889500709902 /* FlightDstCity+CoreDataClass.swift */; };
-		3C667B062617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B032617889500709902 /* FlightDstCity+CoreDataClass.swift */; };
-		3C667B072617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B032617889500709902 /* FlightDstCity+CoreDataClass.swift */; };
 		3C667B162617BC5E00709902 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B152617BC5E00709902 /* Date+Utils.swift */; };
-		3C667B172617BC5E00709902 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B152617BC5E00709902 /* Date+Utils.swift */; };
-		3C667B182617BC5E00709902 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B152617BC5E00709902 /* Date+Utils.swift */; };
 		3C667B1D2617E58B00709902 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B1C2617E58A00709902 /* LocationRequest.swift */; };
-		3C667B1E2617E58B00709902 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B1C2617E58A00709902 /* LocationRequest.swift */; };
-		3C667B1F2617E58B00709902 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B1C2617E58A00709902 /* LocationRequest.swift */; };
 		3C667B242617E8E800709902 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B232617E8E800709902 /* LocationResponse.swift */; };
-		3C667B252617E8E800709902 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B232617E8E800709902 /* LocationResponse.swift */; };
-		3C667B262617E8E800709902 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B232617E8E800709902 /* LocationResponse.swift */; };
 		3C667B2B2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
-		3C667B2C2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
-		3C667B2D2617E99E00709902 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B2A2617E99E00709902 /* Location.swift */; };
 		3C667B322619C85A00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
-		3C667B332619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
-		3C667B342619C85B00709902 /* FlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B312619C85A00709902 /* FlightCard.swift */; };
 		3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
-		3C667B3D261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
-		3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */; };
 		3C667B47261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
-		3C667B48261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
-		3C667B49261A1B1C00709902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667B46261A1B1C00709902 /* HomeViewController.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC08026137B4C00E3827C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC07E26137B4C00E3827C /* Main.storyboard */; };
@@ -45,46 +27,18 @@
 		3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
 		3CDDC0DB2613AA3100E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
 		3CDDC0E82613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
-		3CDDC0E92613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
-		3CDDC0EA2613AA7200E3827C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */; };
 		3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0EE2613AD4F00E3827C /* NetworkTests.swift */; };
-		3CDDC0FB2613AE4300E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
-		3CDDC0FF2613AE4300E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
-		3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
-		3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
 		3CDDC1102613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
-		3CDDC1112613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
-		3CDDC1122613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
 		3CDDC11A2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
-		3CDDC11B2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
-		3CDDC11C2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
 		3CDDC12B2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
-		3CDDC12C2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
-		3CDDC12D2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
 		3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
-		3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
-		3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
 		3CDDC13C2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
-		3CDDC13D2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
-		3CDDC13E2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
 		3CDDC154261487C100E3827C /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC153261487C100E3827C /* FlightsTableViewController.swift */; };
-		3CDDC155261487C100E3827C /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC153261487C100E3827C /* FlightsTableViewController.swift */; };
-		3CDDC156261487C100E3827C /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC153261487C100E3827C /* FlightsTableViewController.swift */; };
 		3CDDC15F2614882700E3827C /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC15D2614882700E3827C /* FlightTableViewCell.swift */; };
-		3CDDC1602614882700E3827C /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC15D2614882700E3827C /* FlightTableViewCell.swift */; };
-		3CDDC1612614882700E3827C /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC15D2614882700E3827C /* FlightTableViewCell.swift */; };
 		3CDDC1622614882700E3827C /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC15E2614882700E3827C /* FlightTableViewCell.xib */; };
-		3CDDC1632614882700E3827C /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC15E2614882700E3827C /* FlightTableViewCell.xib */; };
-		3CDDC1642614882700E3827C /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC15E2614882700E3827C /* FlightTableViewCell.xib */; };
 		3CDDC1692614B97600E3827C /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1682614B97600E3827C /* FlightsViewModel.swift */; };
-		3CDDC16A2614B97600E3827C /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1682614B97600E3827C /* FlightsViewModel.swift */; };
-		3CDDC16B2614B97600E3827C /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1682614B97600E3827C /* FlightsViewModel.swift */; };
 		3CDDC1762614E96100E3827C /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1752614E96100E3827C /* FlightRequest.swift */; };
-		3CDDC1772614E96100E3827C /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1752614E96100E3827C /* FlightRequest.swift */; };
-		3CDDC1782614E96100E3827C /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1752614E96100E3827C /* FlightRequest.swift */; };
 		3CDDC17E2614EDDC00E3827C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC17D2614EDDC00E3827C /* LocationManager.swift */; };
-		3CDDC17F2614EDDC00E3827C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC17D2614EDDC00E3827C /* LocationManager.swift */; };
-		3CDDC1802614EDDC00E3827C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC17D2614EDDC00E3827C /* LocationManager.swift */; };
 		3E6FF6500DD3B952002A8A11 /* libPods-Traveller-TravellerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A145564D7CFDD59D6234AEAC /* libPods-Traveller-TravellerUITests.a */; };
 		76BBD769426C05F809F4148C /* libPods-Traveller.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D9CF1E3AD9C79BD38B018 /* libPods-Traveller.a */; };
 		8BBB218C35F180B813841F54 /* libPods-TravellerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86438D96670FECEC4D0E5720 /* libPods-TravellerTests.a */; };
@@ -485,7 +439,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDDC1632614882700E3827C /* FlightTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +446,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDDC1642614882700E3827C /* FlightTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,30 +557,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDDC1112613B67A00E3827C /* Flight.swift in Sources */,
-				3C667B252617E8E800709902 /* LocationResponse.swift in Sources */,
-				3C667B172617BC5E00709902 /* Date+Utils.swift in Sources */,
-				3CDDC11B2613B6D900E3827C /* FlightResponse.swift in Sources */,
-				3C667B1E2617E58B00709902 /* LocationRequest.swift in Sources */,
-				3C667AFA26176CBF00709902 /* Bundle+getInfoValue.swift in Sources */,
 				3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */,
-				3CDDC16A2614B97600E3827C /* FlightsViewModel.swift in Sources */,
-				3CDDC17F2614EDDC00E3827C /* LocationManager.swift in Sources */,
-				3C667B332619C85B00709902 /* FlightCard.swift in Sources */,
-				3CDDC1332613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
-				3C667B48261A1B1C00709902 /* HomeViewController.swift in Sources */,
-				3CDDC1032613AE4600E3827C /* APIConstants.swift in Sources */,
-				3C667B062617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */,
 				3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */,
-				3C667B2C2617E99E00709902 /* Location.swift in Sources */,
-				3CDDC0E92613AA7200E3827C /* APIConfiguration.swift in Sources */,
-				3CDDC1602614882700E3827C /* FlightTableViewCell.swift in Sources */,
-				3CDDC0FB2613AE4300E3827C /* APIClient.swift in Sources */,
-				3CDDC1772614E96100E3827C /* FlightRequest.swift in Sources */,
-				3CDDC13D2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
-				3C667B3D261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
-				3CDDC12C2613C9FB00E3827C /* APIResponse.swift in Sources */,
-				3CDDC155261487C100E3827C /* FlightsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,29 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDDC11C2613B6D900E3827C /* FlightResponse.swift in Sources */,
-				3CDDC1612614882700E3827C /* FlightTableViewCell.swift in Sources */,
-				3C667B2D2617E99E00709902 /* Location.swift in Sources */,
-				3CDDC1802614EDDC00E3827C /* LocationManager.swift in Sources */,
-				3CDDC1342613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
-				3CDDC156261487C100E3827C /* FlightsTableViewController.swift in Sources */,
-				3C667B49261A1B1C00709902 /* HomeViewController.swift in Sources */,
-				3C667B3E261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
-				3CDDC1072613AE4700E3827C /* APIConstants.swift in Sources */,
-				3C667B182617BC5E00709902 /* Date+Utils.swift in Sources */,
-				3C667B072617889500709902 /* FlightDstCity+CoreDataClass.swift in Sources */,
-				3C667AFB26176CBF00709902 /* Bundle+getInfoValue.swift in Sources */,
 				3CDDC09E26137B4E00E3827C /* TravellerUITests.swift in Sources */,
-				3CDDC0EA2613AA7200E3827C /* APIConfiguration.swift in Sources */,
-				3C667B262617E8E800709902 /* LocationResponse.swift in Sources */,
-				3CDDC0FF2613AE4300E3827C /* APIClient.swift in Sources */,
-				3C667B1F2617E58B00709902 /* LocationRequest.swift in Sources */,
-				3CDDC12D2613C9FB00E3827C /* APIResponse.swift in Sources */,
-				3CDDC1122613B67A00E3827C /* Flight.swift in Sources */,
-				3C667B342619C85B00709902 /* FlightCard.swift in Sources */,
-				3CDDC16B2614B97600E3827C /* FlightsViewModel.swift in Sources */,
-				3CDDC13E2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */,
-				3CDDC1782614E96100E3827C /* FlightRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
