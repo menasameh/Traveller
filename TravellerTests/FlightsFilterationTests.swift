@@ -29,11 +29,11 @@ class FlightsFilterationTests: XCTestCase {
     
     func testNoSavedFlights() throws {
         // prepare
-        let flights = getFlights(cities: ["1", "2", "3", "4", "5", "6"])
+        let flights = TestUtils.getFlights(cities: ["1", "2", "3", "4", "5", "6"])
         let savedFlights = flightsService.getAllSavedFlights()
         let viewModel = FlightsViewModel()
-        // action
         
+        // action
         viewModel.filter(apiFlights: flights, savedFlights: savedFlights)
         
         // assert
@@ -44,12 +44,12 @@ class FlightsFilterationTests: XCTestCase {
     
     func testSavedFlightsOtherDay() throws {
         // prepare
-        flightsService.saveFlightCities(getFlights(cities: ["1"]), on: Date().add(days: -1))
-        let flights = getFlights(cities: ["1", "2", "3", "4", "5", "6"])
+        flightsService.saveFlightCities(TestUtils.getFlights(cities: ["1"]), on: Date().add(days: -1))
+        let flights = TestUtils.getFlights(cities: ["1", "2", "3", "4", "5", "6"])
         let savedFlights = flightsService.getAllSavedFlights()
         let viewModel = FlightsViewModel()
-        // action
         
+        // action
         viewModel.filter(apiFlights: flights, savedFlights: savedFlights)
         
         // assert
@@ -60,12 +60,12 @@ class FlightsFilterationTests: XCTestCase {
     
     func testSavedFlightsSameDayFullCapacity() throws {
         // prepare
-        flightsService.saveFlightCities(getFlights(cities: ["1", "2", "3", "4", "6"]), on: Date())
-        let flights = getFlights(cities: ["1", "2", "3", "4", "5", "6"])
+        flightsService.saveFlightCities(TestUtils.getFlights(cities: ["1", "2", "3", "4", "6"]), on: Date())
+        let flights = TestUtils.getFlights(cities: ["1", "2", "3", "4", "5", "6"])
         let savedFlights = flightsService.getAllSavedFlights()
         let viewModel = FlightsViewModel()
+        
         // action
-
         viewModel.filter(apiFlights: flights, savedFlights: savedFlights)
         
         // assert
@@ -79,12 +79,12 @@ class FlightsFilterationTests: XCTestCase {
     
     func testSavedFlightsSameDayNotFullCapacity() throws {
         // prepare
-        flightsService.saveFlightCities(getFlights(cities: ["6"]), on: Date())
-        let flights = getFlights(cities: ["1", "2", "3", "4", "5", "6"])
+        flightsService.saveFlightCities(TestUtils.getFlights(cities: ["6"]), on: Date())
+        let flights = TestUtils.getFlights(cities: ["1", "2", "3", "4", "5", "6"])
         let savedFlights = flightsService.getAllSavedFlights()
         let viewModel = FlightsViewModel()
+        
         // action
-
         viewModel.filter(apiFlights: flights, savedFlights: savedFlights)
         
         // assert
@@ -94,10 +94,5 @@ class FlightsFilterationTests: XCTestCase {
         XCTAssertEqual(viewModel.getFlight(at: 2).city, "2")
         XCTAssertEqual(viewModel.getFlight(at: 3).city, "3")
         XCTAssertEqual(viewModel.getFlight(at: 4).city, "4")
-    }
-    
-    
-    private func getFlights(cities: [String]) -> [Flight] {
-        return cities.map { Flight(cityTo: $0) }
     }
 }

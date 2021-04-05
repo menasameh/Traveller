@@ -21,13 +21,14 @@
 		3C667BBA261B16D000709902 /* FlightDstCity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BB8261B16D000709902 /* FlightDstCity+CoreDataClass.swift */; };
 		3C667BBB261B16D000709902 /* FlightDstCity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BB9261B16D000709902 /* FlightDstCity+CoreDataProperties.swift */; };
 		3C667BC3261B177700709902 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BC2261B177700709902 /* TestCoreDataStack.swift */; };
+		3C667BCB261B1D7200709902 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BCA261B1D7200709902 /* CoreDataTest.swift */; };
+		3C667BD6261B1F3D00709902 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BD5261B1F3D00709902 /* TestUtils.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC08026137B4C00E3827C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC07E26137B4C00E3827C /* Main.storyboard */; };
 		3CDDC08326137B4C00E3827C /* Traveller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC08126137B4C00E3827C /* Traveller.xcdatamodeld */; };
 		3CDDC08526137B4E00E3827C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC08426137B4E00E3827C /* Assets.xcassets */; };
 		3CDDC08826137B4E00E3827C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC08626137B4E00E3827C /* LaunchScreen.storyboard */; };
-		3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC09226137B4E00E3827C /* TravellerTests.swift */; };
 		3CDDC09E26137B4E00E3827C /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC09D26137B4E00E3827C /* TravellerUITests.swift */; };
 		3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0D02613A95900E3827C /* APIConstants.swift */; };
 		3CDDC0DB2613AA3100E3827C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC0DA2613AA3100E3827C /* APIClient.swift */; };
@@ -82,6 +83,8 @@
 		3C667BB8261B16D000709902 /* FlightDstCity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDstCity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3C667BB9261B16D000709902 /* FlightDstCity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDstCity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3C667BC2261B177700709902 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		3C667BCA261B1D7200709902 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
+		3C667BD5261B1F3D00709902 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		3CDDC08726137B4E00E3827C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CDDC08926137B4E00E3827C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDDC08E26137B4E00E3827C /* TravellerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CDDC09226137B4E00E3827C /* TravellerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTests.swift; sourceTree = "<group>"; };
 		3CDDC09426137B4E00E3827C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDDC09926137B4E00E3827C /* TravellerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC09D26137B4E00E3827C /* TravellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUITests.swift; sourceTree = "<group>"; };
@@ -233,11 +235,12 @@
 		3CDDC09126137B4E00E3827C /* TravellerTests */ = {
 			isa = PBXGroup;
 			children = (
-				3CDDC09226137B4E00E3827C /* TravellerTests.swift */,
 				3CDDC09426137B4E00E3827C /* Info.plist */,
 				3CDDC0EE2613AD4F00E3827C /* NetworkTests.swift */,
 				3C667B8E261A90D900709902 /* FlightsFilterationTests.swift */,
 				3C667BC2261B177700709902 /* TestCoreDataStack.swift */,
+				3C667BCA261B1D7200709902 /* CoreDataTest.swift */,
+				3C667BD5261B1F3D00709902 /* TestUtils.swift */,
 			);
 			path = TravellerTests;
 			sourceTree = "<group>";
@@ -575,9 +578,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C667BD6261B1F3D00709902 /* TestUtils.swift in Sources */,
 				3CDDC0F02613AD4F00E3827C /* NetworkTests.swift in Sources */,
+				3C667BCB261B1D7200709902 /* CoreDataTest.swift in Sources */,
 				3C667B8F261A90D900709902 /* FlightsFilterationTests.swift in Sources */,
-				3CDDC09326137B4E00E3827C /* TravellerTests.swift in Sources */,
 				3C667BC3261B177700709902 /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
