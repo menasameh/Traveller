@@ -36,7 +36,7 @@
 		3CDDC1102613B67A00E3827C /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC10F2613B67A00E3827C /* Flight.swift */; };
 		3CDDC11A2613B6D900E3827C /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1192613B6D900E3827C /* FlightResponse.swift */; };
 		3CDDC12B2613C9FB00E3827C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC12A2613C9FB00E3827C /* APIResponse.swift */; };
-		3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */; };
+		3CDDC1322613E92200E3827C /* TequilaAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC1312613E92200E3827C /* TequilaAPIConfiguration.swift */; };
 		3CDDC13C2613E9D700E3827C /* KiwiAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */; };
 		3CDDC154261487C100E3827C /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC153261487C100E3827C /* FlightsTableViewController.swift */; };
 		3CDDC15F2614882700E3827C /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC15D2614882700E3827C /* FlightTableViewCell.swift */; };
@@ -103,7 +103,7 @@
 		3CDDC10F2613B67A00E3827C /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		3CDDC1192613B6D900E3827C /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
 		3CDDC12A2613C9FB00E3827C /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPickerAPIConfiguration.swift; sourceTree = "<group>"; };
+		3CDDC1312613E92200E3827C /* TequilaAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TequilaAPIConfiguration.swift; sourceTree = "<group>"; };
 		3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiwiAPIConfiguration.swift; sourceTree = "<group>"; };
 		3CDDC153261487C100E3827C /* FlightsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsTableViewController.swift; sourceTree = "<group>"; };
 		3CDDC15D2614882700E3827C /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 				3CDDC0D02613A95900E3827C /* APIConstants.swift */,
 				3CDDC0DA2613AA3100E3827C /* APIClient.swift */,
 				3CDDC0E72613AA7200E3827C /* APIConfiguration.swift */,
-				3CDDC1312613E92200E3827C /* SkyPickerAPIConfiguration.swift */,
+				3CDDC1312613E92200E3827C /* TequilaAPIConfiguration.swift */,
 				3CDDC13B2613E9D700E3827C /* KiwiAPIConfiguration.swift */,
 			);
 			path = Networking;
@@ -542,7 +542,7 @@
 			files = (
 				3C667B47261A1B1C00709902 /* HomeViewController.swift in Sources */,
 				3CDDC1102613B67A00E3827C /* Flight.swift in Sources */,
-				3CDDC1322613E92200E3827C /* SkyPickerAPIConfiguration.swift in Sources */,
+				3CDDC1322613E92200E3827C /* TequilaAPIConfiguration.swift in Sources */,
 				3C667B3C261A015900709902 /* Int+toReadbleDuration.swift in Sources */,
 				3C667B242617E8E800709902 /* LocationResponse.swift in Sources */,
 				3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */,

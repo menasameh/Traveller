@@ -10,7 +10,7 @@ import Alamofire
 
 struct APIClient {
     static func getPopularFlights(for flightRequest: FlightRequest, onCompletion: @escaping (APIResponse<[Flight]>) -> ()) {
-        AF.request(SkyPickerAPIConfiguration.getPopularFlights(flightRequest))
+        AF.request(TequilaAPIConfiguration.getPopularFlights(flightRequest))
             .responseDecodable(of: FlightResponse.self) { response in
             guard let responseValue = response.value else {
                 onCompletion(APIResponse.fail("Network Error"))
@@ -31,7 +31,7 @@ struct APIClient {
     }
     
     static func getCityId(for locationRequest: LocationRequest, onCompletion: @escaping (APIResponse<String>) -> ()) {
-        AF.request(SkyPickerAPIConfiguration.getCityId(locationRequest))
+        AF.request(TequilaAPIConfiguration.getCityId(locationRequest))
             .responseDecodable(of: LocationResponse.self) { response in
             guard let responseValue = response.value else {
                 onCompletion(APIResponse.fail("Network Error"))

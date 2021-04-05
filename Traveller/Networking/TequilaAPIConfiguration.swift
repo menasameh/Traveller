@@ -1,5 +1,5 @@
 //
-//  SkyPickerAPIConfiguration.swift
+//  TequilaAPIConfiguration.swift
 //  Traveller
 //
 //  Created by Mina Sameh on 31/3/21.
@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 import Alamofire
 
-enum SkyPickerAPIConfiguration: APIConfiguration {
+enum TequilaAPIConfiguration: APIConfiguration {
     private static let RESULT_LIMIT = 50
     
     case getPopularFlights(FlightRequest)
@@ -36,7 +36,7 @@ enum SkyPickerAPIConfiguration: APIConfiguration {
             parameter["one_for_city"] = "1"
             parameter["sort"] = "popularity"
             parameter["asc"] = "0"
-            parameter["limit"] = "\(SkyPickerAPIConfiguration.RESULT_LIMIT)"
+            parameter["limit"] = "\(TequilaAPIConfiguration.RESULT_LIMIT)"
             return .url(parameter)
         case .getCityId(let locationReequest):
             return .url(["id" : locationReequest.airportId])
