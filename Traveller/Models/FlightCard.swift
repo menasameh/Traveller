@@ -22,9 +22,9 @@ struct FlightCard {
     
     var stops: String {
         if route.count == 2 {
-            return "Direct flight!"
+            return "direct_flight".localized()
         } else {
-            return "\(route.count - 1) Stops"
+            return "\(route.count - 1) \("stops".localized())"
         }
     }
     

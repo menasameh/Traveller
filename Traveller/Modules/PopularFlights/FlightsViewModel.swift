@@ -112,11 +112,11 @@ extension FlightsViewModel: LocationManagerDelegate {
         let errorString: String
         switch error {
         case .locationPermissionNotGranted:
-            errorString = "Please enable location for traveller app to be able to get you deals nearby"
+            errorString = "location_service_not_enabled".localized()
         case .locationServicesNotEnabled:
-            errorString = "Please enable location service to be able to get you deals nearby"
+            errorString = "location_permission_not_granted".localized()
         case .unknownError:
-            errorString = "Some unknown error occurred, try again later"
+            errorString = "default_location_error".localized()
         }
         listener?.requestFlightsFailed(error: errorString)
     }

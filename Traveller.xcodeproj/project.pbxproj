@@ -24,6 +24,8 @@
 		3C667BCB261B1D7200709902 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BCA261B1D7200709902 /* CoreDataTest.swift */; };
 		3C667BD6261B1F3D00709902 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BD5261B1F3D00709902 /* TestUtils.swift */; };
 		3C8B492A261DF18300BAD789 /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B4929261DF18300BAD789 /* LocationError.swift */; };
+		3C8B4956261E028900BAD789 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B4954261E028900BAD789 /* Localizable.strings */; };
+		3C8B4960261E02AE00BAD789 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B495F261E02AE00BAD789 /* String+localized.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC08026137B4C00E3827C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC07E26137B4C00E3827C /* Main.storyboard */; };
@@ -87,6 +89,9 @@
 		3C667BCA261B1D7200709902 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		3C667BD5261B1F3D00709902 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3C8B4929261DF18300BAD789 /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		3C8B4955261E028900BAD789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C8B495B261E029E00BAD789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C8B495F261E02AE00BAD789 /* String+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +175,7 @@
 		3C667AF726176C1B00709902 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3C8B495F261E02AE00BAD789 /* String+localized.swift */,
 				3C667AF826176CBF00709902 /* Bundle+getInfoValue.swift */,
 				3C667B152617BC5E00709902 /* Date+Utils.swift */,
 				3C667B3B261A015800709902 /* Int+toReadbleDuration.swift */,
@@ -259,6 +265,7 @@
 		3CDDC0C02613852F00E3827C /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				3C8B4954261E028900BAD789 /* Localizable.strings */,
 				3CDDC07826137B4C00E3827C /* AppDelegate.swift */,
 				3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */,
 				3CDDC08426137B4E00E3827C /* Assets.xcassets */,
@@ -449,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8B4956261E028900BAD789 /* Localizable.strings in Resources */,
 				3CDDC08826137B4E00E3827C /* LaunchScreen.storyboard in Resources */,
 				3CDDC1622614882700E3827C /* FlightTableViewCell.xib in Resources */,
 				3CDDC08526137B4E00E3827C /* Assets.xcassets in Resources */,
@@ -568,6 +576,7 @@
 				3C667BBB261B16D000709902 /* FlightDstCity+CoreDataProperties.swift in Sources */,
 				3C667AF926176CBF00709902 /* Bundle+getInfoValue.swift in Sources */,
 				3C667B9A261B130900709902 /* CoreDataStack.swift in Sources */,
+				3C8B4960261E02AE00BAD789 /* String+localized.swift in Sources */,
 				3CDDC0E82613AA7200E3827C /* APIConfiguration.swift in Sources */,
 				3C667BA2261B13BD00709902 /* FlightsService.swift in Sources */,
 				3C667BBA261B16D000709902 /* FlightDstCity+CoreDataClass.swift in Sources */,
@@ -614,6 +623,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3C8B4954261E028900BAD789 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8B4955261E028900BAD789 /* Base */,
+				3C8B495B261E029E00BAD789 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3CDDC07E26137B4C00E3827C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -25,7 +25,7 @@ class KiwiAPIConfiguration {
         APIClient.getCityId(for: LocationRequest(airportId: destinationId)) { [weak self] response in
             guard let strongSelf = self else { return }
             guard case let .success(cityId) = response else {
-                onCompletion(APIResponse.fail("Can't load image"))
+                onCompletion(APIResponse.fail("image_load_error".localized()))
                 return
             }
 
@@ -34,7 +34,7 @@ class KiwiAPIConfiguration {
                     self?.imageCache.add(image, withIdentifier: destinationId)
                     onCompletion(APIResponse.success(image))
                 } else {
-                    onCompletion(APIResponse.fail("Can't load image"))
+                    onCompletion(APIResponse.fail("image_load_error".localized()))
                 }
             }
         }

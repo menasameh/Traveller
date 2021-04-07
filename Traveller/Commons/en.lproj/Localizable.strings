@@ -1,0 +1,27 @@
+/* 
+ Localizable.strings
+  Traveller
+
+  Created by Mina Sameh on 7/4/21.
+  
+*/
+
+// MARK: - popular flights screen
+"popular_flights_screen_title" = "Popular Offers";
+
+// MARK: - Flight card
+"direct_flight" = "Direct Flight!";
+"stops" = "Stops";
+
+// MARK: - KiwiAPIConfiguration errors
+"image_load_error" = "Can't load image";
+
+// MARK: - TequilaAPIConfiguration errors
+"parse_response_error" = "Can't parse response";
+"response_error" = "Response error";
+"default_detwork_error" = "Network Error";
+
+// MARK: - Location service errors
+"location_service_not_enabled" = "Please enable location for traveller app to be able to get you deals nearby";
+"location_permission_not_granted" = "Please enable location service to be able to get you deals nearby";
+"default_location_error" = "Some unknown error occurred, try again later";

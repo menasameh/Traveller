@@ -32,7 +32,7 @@ class FlightsTableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        title = "Popular Offers"
+        title = "popular_flights_screen_title".localized()
 
         flightsViewModel.listener = self
         flightsViewModel.requestPopularFlights()

@@ -16,11 +16,10 @@ struct Constants {
 }
 
 enum HTTPHeaderField: String {
-    case authentication = "Authorization"
     case contentType = "Content-Type"
     case acceptType = "Accept"
     case acceptEncoding = "Accept-Encoding"
-    case string = "String"
+    case apiKey = "apikey"
 }
 
 enum ContentType: String {
