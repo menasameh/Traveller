@@ -13,7 +13,7 @@ struct APIClient {
         AF.request(TequilaAPIConfiguration.getPopularFlights(flightRequest))
             .responseDecodable(of: FlightResponse.self) { response in
             guard let responseValue = response.value else {
-                onCompletion(APIResponse.fail("Network Error"))
+                onCompletion(APIResponse.fail("Can't parse response"))
                 return
             }
 
@@ -25,7 +25,7 @@ struct APIClient {
             if let flights = responseValue.flights {
                 onCompletion(APIResponse.success(flights))
             } else {
-                onCompletion(APIResponse.fail("Can't parse response"))
+                onCompletion(APIResponse.fail("Response error"))
             }
         }
     }
@@ -34,14 +34,14 @@ struct APIClient {
         AF.request(TequilaAPIConfiguration.getCityId(locationRequest))
             .responseDecodable(of: LocationResponse.self) { response in
             guard let responseValue = response.value else {
-                onCompletion(APIResponse.fail("Network Error"))
+                onCompletion(APIResponse.fail("Can't parse response"))
                 return
             }
                 
             if let cityId = responseValue.locations?.first?.city.id {
                 onCompletion(APIResponse.success(cityId))
             } else {
-                onCompletion(APIResponse.fail("Can't parse response"))
+                onCompletion(APIResponse.fail("Response error"))
             }
         }
     }

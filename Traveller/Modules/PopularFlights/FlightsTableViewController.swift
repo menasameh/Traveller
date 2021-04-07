@@ -11,6 +11,7 @@ class FlightsTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var loadingView: UIView!
     
     var flightsViewModel = FlightsViewModel()
@@ -53,6 +54,13 @@ extension FlightsTableViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 extension FlightsTableViewController: FlightsViewModelListener {
+    func requestFlightsFailed(error: String) {
+        errorMessage.text = error
+        loadingView.isHidden = true
+        errorView.isHidden = false
+        emptyView.isHidden = true
+    }
+    
     func requestFlightsStarted() {
         loadingView.isHidden = false
         errorView.isHidden = true

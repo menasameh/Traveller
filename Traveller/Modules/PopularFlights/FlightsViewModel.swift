@@ -11,7 +11,7 @@ import CoreLocation
 protocol FlightsViewModelListener: NSObject {
     func requestFlightsStarted()
     func requestFlightsSucceeded()
-    func requestFlightsFailed()
+    func requestFlightsFailed(error: String)
 }
 
 class FlightsViewModel: NSObject {
@@ -58,9 +58,7 @@ class FlightsViewModel: NSObject {
             case .success(let flights):
                 self?.filter(apiFlights: flights)
             case .fail(let error):
-                self?.listener?.requestFlightsFailed()
-                // TODO: Display error
-                print(error)
+                self?.listener?.requestFlightsFailed(error: error)
             }
         }
     }
@@ -110,6 +108,19 @@ class FlightsViewModel: NSObject {
 }
 
 extension FlightsViewModel: LocationManagerDelegate {
+    func locationIsNotEnabled(error: LocationError) {
+        let errorString: String
+        switch error {
+        case .locationPermissionNotGranted:
+            errorString = "Please enable location for traveller app to be able to get you deals nearby"
+        case .locationServicesNotEnabled:
+            errorString = "Please enable location service to be able to get you deals nearby"
+        case .unknownError:
+            errorString = "Some unknown error occurred, try again later"
+        }
+        listener?.requestFlightsFailed(error: errorString)
+    }
+    
     func locationDidInitialize() {
         if let location = locationManager.lastLocation {
             requestPopularFlights(for: location)
@@ -117,4 +128,5 @@ extension FlightsViewModel: LocationManagerDelegate {
     }
     
     func locationDidUpdate() { /* Not used */ }
+    
 }
