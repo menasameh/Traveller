@@ -5,7 +5,7 @@
 - Xcode version 12.4
 - Cocoapods version 1.10.1
 
-## Dependincies 
+## Dependencies 
 - Alamofire version 5.2, [Github](https://github.com/Alamofire/Alamofire)
 - AlamofireImage version 4.1, [Github](https://github.com/Alamofire/AlamofireImage)
 
