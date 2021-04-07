@@ -29,18 +29,43 @@ shows you the popular flight offers to different destinations using Kiwi API
 
 ### Screenshots
 #### Popular flights flow
-![splash-screen](screenshots/splash-screen.png) ![home-screen](screenshots/home-screen.png) ![loading](screenshots/loading.png) ![popular-flights-screen-normal](screenshots/popular-flights-screen-normal.png)
+
+<p float="left">
+  <img src="screenshots/splash-screen.png" style="border: 1px solid black" width="24%" />
+  <img src="screenshots/home-screen.png" style="border: 1px solid black" width="24%" />
+  <img src="screenshots/loading.png" style="border: 1px solid black" width="24%" />
+  <img src="screenshots/popular-flights-screen-normal.png" style="border: 1px solid black" width="24%" />
+</p>
 
 #### Popular flights screen different states
-Loading
-![loading](screenshots/loading.png) 
-Normal flights loaded
-![popular-flights-screen-normal](screenshots/popular-flights-screen-normal.png)
-Empty flights response
-![popular-flights-screen-empty](screenshots/popular-flights-screen-empty.png)
-API errors
-![error-api](screenshots/error-api-1.png) ![error-api](screenshots/error-api-2.png) ![error-api](screenshots/error-api-3.png)
-Location errors
-![error-location](screenshots/error-location-1.png) ![error-location](screenshots/error-location-2.png) ![error-location](screenshots/error-location-3.png) 
+##### Loading
+
+<img src="screenshots/loading.png" style="border: 1px solid black" width="25%" />
+
+##### Normal flights loaded
+<img src="screenshots/popular-flights-screen-normal.png" style="border: 1px solid black" width="25%" />
+
+##### Empty flights response
+<img src="screenshots/popular-flights-screen-empty.png" style="border: 1px solid black" width="25%" />
+
+##### API errors
+<p float="left">
+    <img src="screenshots/error-api-1.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/error-api-2.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/error-api-3.png" style="border: 1px solid black" width="32%" />
+</p>
+
+##### Location errors
+<p float="left">
+    <img src="screenshots/error-location-1.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/error-location-2.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/error-location-3.png" style="border: 1px solid black" width="32%" />
+</p>
+
 #### Auth flow [not implemented just UI]
-![auth-flow](screenshots/auth-keyboard.png) ![auth-flow](screenshots/auth-mail.png) ![auth-flow](screenshots/auth-pass.png) 
+
+<p float="left">
+    <img src="screenshots/auth-keyboard.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/auth-mail.png" style="border: 1px solid black" width="32%" />
+    <img src="screenshots/auth-pass.png" style="border: 1px solid black" width="32%" />
+</p>
