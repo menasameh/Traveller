@@ -23,6 +23,7 @@
 		3C667BC3261B177700709902 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BC2261B177700709902 /* TestCoreDataStack.swift */; };
 		3C667BCB261B1D7200709902 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BCA261B1D7200709902 /* CoreDataTest.swift */; };
 		3C667BD6261B1F3D00709902 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C667BD5261B1F3D00709902 /* TestUtils.swift */; };
+		3C8B492A261DF18300BAD789 /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B4929261DF18300BAD789 /* LocationError.swift */; };
 		3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07826137B4C00E3827C /* AppDelegate.swift */; };
 		3CDDC07B26137B4C00E3827C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */; };
 		3CDDC08026137B4C00E3827C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDC07E26137B4C00E3827C /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		3C667BC2261B177700709902 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		3C667BCA261B1D7200709902 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		3C667BD5261B1F3D00709902 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		3C8B4929261DF18300BAD789 /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 		3CDDC07526137B4C00E3827C /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDDC07826137B4C00E3827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDDC07A26137B4C00E3827C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				3CDDC17D2614EDDC00E3827C /* LocationManager.swift */,
+				3C8B4929261DF18300BAD789 /* LocationError.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				3C667B242617E8E800709902 /* LocationResponse.swift in Sources */,
 				3CDDC0D12613A95900E3827C /* APIConstants.swift in Sources */,
 				3CDDC07926137B4C00E3827C /* AppDelegate.swift in Sources */,
+				3C8B492A261DF18300BAD789 /* LocationError.swift in Sources */,
 				3C667B162617BC5E00709902 /* Date+Utils.swift in Sources */,
 				3C667B1D2617E58B00709902 /* LocationRequest.swift in Sources */,
 				3CDDC15F2614882700E3827C /* FlightTableViewCell.swift in Sources */,

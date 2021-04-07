@@ -10,6 +10,7 @@ import CoreLocation
 protocol LocationManagerDelegate: NSObject {
     func locationDidInitialize()
     func locationDidUpdate()
+    func locationIsNotEnabled(error: LocationError)
 }
 
 class LocationManager: NSObject {
@@ -26,13 +27,20 @@ class LocationManager: NSObject {
     
     func startLocationService() {
         requestPermissions()
-        // TODO: Check authorization state
-//        locationManager.authorizationStatus
-
+        
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+            switch locationManager.authorizationStatus {
+                case .notDetermined, .restricted, .denied:
+                    delegate?.locationIsNotEnabled(error: .locationPermissionNotGranted)
+                case .authorizedAlways, .authorizedWhenInUse:
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                    locationManager.startUpdatingLocation()
+                @unknown default:
+                    delegate?.locationIsNotEnabled(error: .unknownError)
+            }
+        } else {
+            delegate?.locationIsNotEnabled(error: .locationServicesNotEnabled)
         }
     }
 }
