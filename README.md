@@ -1,5 +1,5 @@
-## Traveller app
-shows you the popular flight offers to different destinations using Kiwi API 
+## <img src="Traveller/Commons/Assets.xcassets/AppIcon.appiconset/1024.png" width="10%" /> Traveller app
+ shows you the popular flight offers to different destinations using Tequila API 
 
 ### Project specs
 - Xcode version 12.4
