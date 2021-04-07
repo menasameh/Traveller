@@ -1,4 +1,4 @@
-# <img src="Traveller/Commons/Assets.xcassets/AppIcon.appiconset/1024.png" height="50 px" /> Traveller app
+# <img src="Traveller/Commons/Assets.xcassets/AppIcon.appiconset/1024.png" height="100px" /> Traveller app
  shows you the popular flight offers to different destinations using Tequila API 
 
 ## Project specs
