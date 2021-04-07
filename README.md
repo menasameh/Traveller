@@ -18,6 +18,8 @@ shows you the popular flight offers to different destinations using Kiwi API
 - First I was using skypicker api but I notced that the docs says we highly recommend using tequila.kiwi.com
 - So I have upgraded the network layer to use tequila.kiwi.com
 
+### Implementation plan
+you can find more about what is currently implemented and what could be added if we had more time, [here](https://docs.google.com/spreadsheets/d/1HHcXiZNlajEqxF_5usyq5EthRvCbp3eelU0DdiMvibQ/edit?usp=sharing)
 
 ### API key
 - You will need to create an account in Tequila portal [here](https://tequila.kiwi.com/portal/login/register)
